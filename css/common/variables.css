@@ -11,5 +11,5 @@
   --border-dark-color: #665f55;
 
   --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  --trans-duration: 300ms;
+  --trans-duration: 500ms;
 }
