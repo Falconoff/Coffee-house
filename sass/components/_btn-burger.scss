@@ -5,19 +5,17 @@
   justify-content: center;
   align-items: center;
   border-radius: 100px;
-  border: 1px solid var(--border-dark-color);
+  border: 1px solid $border-dark-color;
 
-  /* background-color: var(--background-body-color); */
+  /* background-color: $background-body-color; */
   background-color: transparent;
   margin-left: auto;
-}
 
-.btn-burger__icon {
-  stroke: var(--text-dark-color);
-}
+  &__icon {
+    stroke: $text-dark-color;
+  }
 
-@media screen and (min-width: 1440px) {
-  .btn-burger {
+  @media screen and (min-width: 1440px) {
     display: none;
   }
 }

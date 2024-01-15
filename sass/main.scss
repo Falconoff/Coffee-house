@@ -1,3 +1,30 @@
 // utils
 @import "./utils/variables";
 @import "./utils/visually-hidden";
+
+// base
+@import "./base/common";
+// @import "./base/section";
+@import "./base/container";
+
+// components
+@import "./components/btn-burger";
+// @import './components/button';
+// @import './components/logo';
+// @import './components/mobile-menu';
+// @import './components/socials-links';
+// @import './components/section-title';
+// @import './components/backdrop';
+// @import './components/modal';
+// @import './components/modal-form';
+
+// layouts
+@import "./layout/header";
+// @import './layout/hero';
+// @import './layout/features';
+// @import './layout/works';
+// @import './layout/team';
+// @import './layout/clients';
+// @import './layout/footer';
+// @import './layout/filter';
+// @import './layout/gallery';
