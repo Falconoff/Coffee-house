@@ -5,14 +5,14 @@
   justify-content: center;
   align-items: center;
   border-radius: 100px;
-  border: 1px solid $border-dark-color;
+  border: 1px solid $border-color-dark;
 
-  /* background-color: $background-body-color; */
+  /* background-color: $background-color-body; */
   background-color: transparent;
   margin-left: auto;
 
   &__icon {
-    stroke: $text-dark-color;
+    stroke: $text-color-dark;
   }
 
   @media screen and (min-width: 1440px) {
