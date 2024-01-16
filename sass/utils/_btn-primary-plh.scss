@@ -1,0 +1,32 @@
+%btn-primary {
+  display: flex;
+  // padding: 10px 78px;
+  // width: 200px;
+  // padding: 12px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  // align-self: stretch;
+
+  border-radius: 100px;
+
+  background-color: $background-color-body;
+
+  color: inherit;
+  font-weight: 600;
+  // border Dark
+  // border: 1px solid #665f55;
+  // text Dark
+  // color: #403f3d;
+
+  /*
+  color: var(--Text-Dark, #403F3D);
+  text-align: center;
+
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+ 
+  line-height: 1.5; 
+  */
+}

@@ -1,11 +1,13 @@
 // utils
 @import "./utils/variables";
 @import "./utils/visually-hidden";
+@import "./utils/text-mixin";
+@import "./utils/btn-primary-plh";
 
 // base
 @import "./base/common";
-// @import "./base/section";
 @import "./base/container";
+// @import "./base/section";
 
 // components
 @import "./components/btn-burger";
@@ -20,7 +22,7 @@
 
 // layouts
 @import "./layout/header";
-// @import './layout/hero';
+@import "./layout/hero";
 // @import './layout/features';
 // @import './layout/works';
 // @import './layout/team';

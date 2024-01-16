@@ -1,0 +1,64 @@
+.hero {
+  &__background {
+    // height: 552px;
+    width: 100%;
+    border-radius: 40px;
+
+    background-color: #fff;
+    background-image: url("../../images/hero/img-hero.jpg");
+
+    background-position: 50% 50%;
+    background-size: cover;
+
+    padding: 60px 16px;
+
+    @media screen and (min-width: $tablet) {
+      padding: 100px 60px;
+    }
+    @media screen and (min-width: $desktop) {
+      padding: 100px 100px;
+    }
+  }
+
+  &__wrapper {
+    @media screen and (min-width: $desktop) {
+      width: 530px;
+    }
+  }
+
+  &__heading {
+    margin-bottom: 40px;
+
+    @include typography($text-color-light, 42px, 600, 1.15);
+
+    & span {
+      color: $text-color-accent;
+      font-style: italic;
+    }
+
+    @media screen and (min-width: $tablet) {
+      font-size: 72px;
+      line-height: 1.05;
+    }
+  }
+
+  &__content {
+    margin-bottom: 40px;
+
+    color: $text-color-light;
+  }
+}
+
+.hero__btn {
+  @extend %btn-primary;
+
+  width: 200px;
+
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  & .btn-icon {
+    fill: transparent;
+    stroke: currentColor;
+  }
+}

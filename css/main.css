@@ -14,6 +14,33 @@
   outline-offset: 0;
 }
 
+.hero__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+  border-radius: 100px;
+  background-color: #e1d4c9;
+  color: inherit;
+  font-weight: 600;
+  /*
+  color: var(--Text-Dark, #403F3D);
+  text-align: center;
+
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+
+  line-height: 1.5; 
+  */
+}
+
 h1,
 h2,
 h3,
@@ -52,6 +79,9 @@ body {
   font-size: 16px;
   letter-spacing: normal;
   color: #403f3d;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
   background-color: #e1d4c9;
 }
 
@@ -101,7 +131,7 @@ body {
           align-items: center;
   border-radius: 100px;
   border: 1px solid #665f55;
-  /* background-color: $background-body-color; */
+  /* background-color: $background-color-body; */
   background-color: transparent;
   margin-left: auto;
 }
@@ -208,4 +238,60 @@ header {
   fill: transparent;
   stroke: currentColor;
   margin-left: 8px;
+}
+
+.hero__background {
+  width: 100%;
+  border-radius: 40px;
+  background-color: #fff;
+  background-image: url("../../images/hero/img-hero.jpg");
+  background-position: 50% 50%;
+  background-size: cover;
+  padding: 60px 16px;
+}
+@media screen and (min-width: 768px) {
+  .hero__background {
+    padding: 100px 60px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .hero__background {
+    padding: 100px 100px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .hero__wrapper {
+    width: 530px;
+  }
+}
+.hero__heading {
+  margin-bottom: 40px;
+  color: #e1d4c9;
+  font-size: 42px;
+  font-weight: 600;
+  line-height: 1.15;
+}
+.hero__heading span {
+  color: #b0907a;
+  font-style: italic;
+}
+@media screen and (min-width: 768px) {
+  .hero__heading {
+    font-size: 72px;
+    line-height: 1.05;
+  }
+}
+.hero__content {
+  margin-bottom: 40px;
+  color: #e1d4c9;
+}
+
+.hero__btn {
+  width: 200px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.hero__btn .btn-icon {
+  fill: transparent;
+  stroke: currentColor;
 }/*# sourceMappingURL=main.css.map */
