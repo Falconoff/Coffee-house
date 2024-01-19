@@ -8,6 +8,7 @@ header {
 
   @media screen and (min-width: $desktop) {
     display: flex;
+    transform: translateY(-2px);
 
     width: 100%;
 
@@ -20,11 +21,10 @@ header {
 
 .nav-list {
   flex-grow: 1;
-  display: flex;
-  /* margin-left: auto;
-  margin-right: auto; */
-  align-items: center;
-  justify-content: center;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+  @extend %flex-centered;
 
   &__item:not(:last-child) {
     margin-right: 40px;
@@ -53,9 +53,8 @@ header {
     opacity: 0;
 
     transform: scaleX(0);
-    transition-property: transform, opacity;
-    transition-duration: $trans-duration;
-    transition-timing-function: $timing-function;
+
+    @include transition-props(transform, opacity);
   }
 
   &:hover:after {
@@ -65,9 +64,12 @@ header {
 }
 
 .nav__outer-link {
-  display: flex;
-  align-items: center;
-  align-items: baseline;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+  @extend %flex-centered;
+  gap: 8px;
+  // align-items: baseline;
 
   padding-top: 2px;
   padding-bottom: 2px;
@@ -78,5 +80,5 @@ header {
 .link__icon {
   fill: transparent;
   stroke: currentColor;
-  margin-left: 8px;
+  // margin-left: 8px;
 }

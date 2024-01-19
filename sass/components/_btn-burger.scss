@@ -1,9 +1,9 @@
 .btn-burger {
   width: 44px;
   height: 44px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+  @extend %flex-centered;
+
   border-radius: 100px;
   border: 1px solid $border-color-dark;
 
