@@ -277,9 +277,6 @@ header {
   .hero__btn:hover, .hero__btn:focus {
     cursor: pointer;
   }
-}
-
-@media screen and (min-width: 1440px) {
   .hero__btn .btn-icon {
     opacity: 0;
     -webkit-transition-property: opacity, none, none, none;
@@ -291,7 +288,7 @@ header {
     -webkit-transition-delay: 0;
             transition-delay: 0;
   }
-  .hero__btn:hover .btn-icon {
+  .hero__btn:hover .btn-icon, .hero__btn:focus .btn-icon {
     opacity: 1;
   }
   .hero__btn .btn-text {
@@ -308,7 +305,7 @@ header {
     -webkit-transition-delay: 0;
             transition-delay: 0;
   }
-  .hero__btn:hover .btn-text {
+  .hero__btn:hover .btn-text, .hero__btn:focus .btn-text {
     -webkit-transform: translateX(0);
             transform: translateX(0);
   }

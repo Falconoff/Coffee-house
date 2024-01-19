@@ -60,41 +60,32 @@
   & .btn-icon {
     fill: transparent;
     stroke: currentColor;
-
-    // @media screen and (min-width: $desktop) {
-    //   opacity: 0;
-
-    //   &:hover {
-    //     opacity: 1;
-    //   }
-    // }
   }
 
+  // transition for Button only on the Desktop
   @media screen and (min-width: $desktop) {
     &:hover,
     &:focus {
       cursor: pointer;
     }
-  }
-}
 
-@media screen and (min-width: $desktop) {
-  .hero__btn {
     & .btn-icon {
       opacity: 0;
       @include transition-props(opacity);
     }
 
-    &:hover .btn-icon {
+    &:hover .btn-icon,
+    &:focus .btn-icon {
       opacity: 1;
     }
 
     & .btn-text {
       transform: translateX(15px);
-
       @include transition-props(transform, color);
     }
-    &:hover .btn-text {
+
+    &:hover .btn-text,
+    &:focus .btn-text {
       transform: translateX(0);
     }
   }
