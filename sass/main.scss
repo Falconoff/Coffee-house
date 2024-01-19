@@ -3,8 +3,9 @@
 @import "./utils/flex-centered-plh";
 @import "./utils/transition-mixin";
 @import "./utils/visually-hidden";
-@import "./utils/text-mixin";
+@import "./utils/typography-mixin";
 @import "./utils/btn-primary-plh";
+@import "./utils/heading-plh";
 
 // base
 @import "./base/common";
@@ -25,7 +26,7 @@
 // layouts
 @import "./layout/header";
 @import "./layout/hero";
-// @import './layout/features';
+@import "./layout/favorite-coffee";
 // @import './layout/works';
 // @import './layout/team';
 // @import './layout/clients';

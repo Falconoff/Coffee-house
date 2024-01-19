@@ -1,12 +1,13 @@
 .container {
   outline: 1px dashed tomato;
-  margin-left: auto;
-  margin-right: auto;
+  // margin-left: auto;
+  // margin-right: auto;
+  margin-inline: auto;
   padding-left: 16px;
   padding-right: 16px;
   /* max-width: 380px; */
-  display: flex;
-  align-items: center;
+  // display: flex;
+  // align-items: center;
 
   @media screen and (min-width: $mobile) {
     max-width: 380px;
@@ -14,8 +15,8 @@
 
   @media screen and (min-width: $tablet) {
     max-width: 768px;
-    padding-left: 40px;
-    padding-right: 40px;
+    // padding-right: 40px;
+    padding-inline: 40px;
   }
 
   @media screen and (min-width: $desktop) {

@@ -31,7 +31,7 @@
 
     @include typography($text-color-light, 42px, 600, 1.15);
 
-    & span {
+    &--accent {
       color: $text-color-accent;
       font-style: italic;
     }

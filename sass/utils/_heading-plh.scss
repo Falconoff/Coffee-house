@@ -1,0 +1,16 @@
+%heading {
+  font: {
+    size: 32px;
+    weight: 600;
+  }
+  line-height: 1.25;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 60px;
+  }
+}
+
+%heading--accent {
+  font-style: italic;
+  color: $text-color-accent;
+}
