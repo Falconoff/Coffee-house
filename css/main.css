@@ -44,18 +44,18 @@
   */
 }
 
-.favorite-coffee__heading {
+.about__heading, .favorite-coffee__heading {
   font-size: 32px;
   font-weight: 600;
   line-height: 1.25;
 }
 @media screen and (min-width: 768px) {
-  .favorite-coffee__heading {
+  .about__heading, .favorite-coffee__heading {
     font-size: 60px;
   }
 }
 
-.favorite-coffee__heading--accent {
+.about__heading--accent, .favorite-coffee__heading--accent {
   font-style: italic;
   color: #b0907a;
 }
@@ -436,4 +436,48 @@ header {
     stroke: #e1d4c9;
     background-color: #665f55;
   }
+}
+
+.about__heading {
+  margin-bottom: 40px;
+  width: 100%;
+}
+.gallery__item {
+  margin-bottom: 40px;
+  height: 590px;
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  outline: 2px dotted blue;
+}
+.gallery__img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  -webkit-transform: scale(1.23);
+          transform: scale(1.23);
+  -webkit-transition-property: none, none, none, -webkit-transform;
+  transition-property: none, none, none, -webkit-transform;
+  transition-property: transform, none, none, none;
+  transition-property: transform, none, none, none, -webkit-transform;
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms;
+  -webkit-transition-timing-function: ease-in;
+          transition-timing-function: ease-in;
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+  outline: 2px dotted yellow;
+}
+@media screen and (min-width: 768px) {
+  .gallery__img {
+    -webkit-transform: scale(1.06);
+            transform: scale(1.06);
+  }
+}
+.gallery__item:hover .gallery__img {
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }/*# sourceMappingURL=main.css.map */
