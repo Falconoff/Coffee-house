@@ -4,3 +4,6 @@
   transition-timing-function: $timing-function;
   transition-delay: 0;
 }
+
+// usage:
+// @include transition-props(transform, color);

@@ -19,15 +19,22 @@
 
 .card {
   margin-bottom: 40px;
+  margin-inline: auto;
+
+  max-width: 348px;
 
   text-align: center;
+
+  @media screen and (min-width: $tablet) {
+    max-width: 480px;
+  }
 }
 
 .card__img {
   margin-bottom: 20px;
 
   width: 100%;
-  height: 348px;
+
   object-fit: contain;
 }
 
@@ -39,8 +46,10 @@
 
 .card__description {
   margin-bottom: 16px;
-  // @include typography($text-color-dark, 24px, 600, 1.25);
-  // text-align: center;
+}
+
+.card__price {
+  @include typography($text-color-dark, 24px, 600, 1.25);
 }
 
 .pagination {
@@ -50,12 +59,62 @@
   &__dot {
     height: 4px;
     width: 40px;
-    //
+
     border: 2px solid $border-color-light;
     border-radius: 100px;
 
     &--current {
       border-color: $border-color-dark;
+    }
+  }
+}
+
+.slider {
+  position: relative;
+}
+
+// Slider's buttons disabled on Mobile, without hover on Tablet, with hover on Desktop
+.slider__btn {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  @extend %flex-centered;
+
+  stroke: $text-color-dark;
+
+  border-radius: 100px;
+  border: 1px solid $border-color-dark;
+  background-color: $background-color-body;
+
+  @include transition-props(background-color, stroke);
+
+  @media screen and (max-width: calc(#{$tablet} - 1px)) {
+    display: none;
+  }
+
+  &.btn--prev {
+    left: 0;
+    top: calc(50% - 52px);
+
+    @media screen and (min-width: $desktop) {
+      left: 4px;
+    }
+  }
+
+  &.btn--next {
+    right: 0;
+    top: calc(50% - 52px);
+
+    @media screen and (min-width: $desktop) {
+      right: 4px;
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    &:hover,
+    &:focus {
+      stroke: $text-color-light;
+      background-color: $background-color-container;
     }
   }
 }
