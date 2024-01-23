@@ -11,18 +11,39 @@
 }
 
 .gallery {
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    flex-direction: column;
+    max-height: 1060px;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+
   &__item {
     margin-bottom: 40px;
 
-    // display: block;
     height: 590px;
     width: 100%;
-    // width: 348px;
 
     border-radius: 20px;
     overflow: hidden;
 
-    outline: 2px dotted blue;
+    @media screen and (max-width: calc(#{$desktop} - 1px) ) {
+      &:nth-child(2),
+      &:nth-child(3) {
+        display: none;
+      }
+    }
+
+    @media screen and (min-width: $desktop) {
+      width: 660px;
+      margin-bottom: 0px;
+
+      &:nth-child(2),
+      &:nth-child(3) {
+        height: 430px;
+      }
+    }
   }
 
   &__img {
@@ -30,18 +51,20 @@
     height: 100%;
     object-fit: cover;
 
-    // object-position: -50px 0px;
     object-position: center;
 
     // Mobile Scale
     transform: scale(1.23);
+    // Tablet Scale
     @media screen and (min-width: $tablet) {
       transform: scale(1.06);
     }
+    // Desktop Scale
+    @media screen and (min-width: $desktop) {
+      transform: scale(1.1);
+    }
 
     @include transition-props(transform);
-
-    outline: 2px dotted yellow;
   }
 
   &__item:hover &__img {
