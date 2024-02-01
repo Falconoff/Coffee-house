@@ -185,7 +185,6 @@ header {
 }
 
 .nav__link {
-  background-color: #5ff;
   position: relative;
   padding-top: 5px;
   padding-bottom: 5px;
@@ -214,7 +213,7 @@ header {
   -webkit-transition-delay: 0;
           transition-delay: 0;
 }
-.nav__link:hover:after {
+.nav__link:hover:after, .nav__link:focus::after {
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
   opacity: 1;
@@ -224,7 +223,6 @@ header {
   gap: 8px;
   padding-top: 2px;
   padding-bottom: 2px;
-  /* margin-left: auto; */
 }
 
 .link__icon {
