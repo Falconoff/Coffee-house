@@ -1,0 +1,96 @@
+.mobile-app__wrapper {
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    gap: 100px;
+    align-items: center;
+  }
+}
+
+.mobile-app__heading {
+  margin-bottom: 40px;
+
+  width: 100%;
+
+  @extend %heading;
+
+  &--accent {
+    @extend %heading--accent;
+  }
+}
+
+.mobile-app__text {
+  margin-bottom: 40px;
+}
+
+.mobile-app__list {
+  margin-bottom: 40px;
+
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 100px;
+  }
+}
+
+.mobile-app__list-item {
+  @media screen and (max-width: calc(#{$tablet} - 1px) ) {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: inline-block;
+
+    &:not(:last-child) {
+      margin-right: 16px;
+    }
+  }
+}
+
+.mobile-app__link {
+  @extend %btn-primary;
+
+  display: flex;
+  align-items: center;
+  width: 200px;
+  padding: 12px 20px;
+
+  border: 1px solid $border-color-dark;
+
+  @include transition-props(background-color, color);
+
+  @media screen and (min-width: $desktop) {
+    &:hover,
+    &:focus {
+      background-color: $background-color-container;
+      color: $text-color-light;
+    }
+  }
+
+  .btn {
+    &__text-wrap {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__first-string {
+      @include typography(inherit, 10px, 600, 1.4);
+    }
+
+    &__second-string {
+      @include typography(inherit, 16px, 600, 1.5);
+    }
+  }
+}
+
+.btn__icon {
+  fill: currentColor;
+}
+
+.mobile-app__img {
+  width: 100%;
+
+  @media screen and (min-width: $tablet) {
+    margin-inline: auto;
+    width: 630px;
+  }
+}

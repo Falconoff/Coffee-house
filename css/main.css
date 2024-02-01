@@ -1,4 +1,4 @@
-.slider__btn, .pagination, .nav__outer-link, .nav-list, .header__wrap, .btn-burger, .hero__btn {
+.slider__btn, .pagination, .hero__btn, .nav__outer-link, .nav-list, .header__wrap, .btn-burger {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -26,7 +26,7 @@
   outline-offset: 0;
 }
 
-.hero__btn {
+.mobile-app__link, .hero__btn {
   gap: 8px;
   border-radius: 100px;
   background-color: #e1d4c9;
@@ -111,8 +111,7 @@ section {
 .container {
   outline: 1px dashed tomato;
   margin-inline: auto;
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-inline: 16px;
   /* max-width: 380px; */
 }
 @media screen and (min-width: 380px) {
@@ -515,6 +514,18 @@ header {
           transform: scale(1);
 }
 
+@media screen and (min-width: 1440px) {
+  .mobile-app__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 100px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 .mobile-app__heading {
   margin-bottom: 40px;
   width: 100%;
@@ -526,9 +537,24 @@ header {
 .mobile-app__list {
   margin-bottom: 40px;
 }
+@media screen and (min-width: 768px) {
+  .mobile-app__list {
+    margin-bottom: 100px;
+  }
+}
 
-.mobile-app__list-item:not(:last-child) {
-  margin-bottom: 20px;
+@media screen and (max-width: calc(768px - 1px)) {
+  .mobile-app__list-item:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .mobile-app__list-item {
+    display: inline-block;
+  }
+  .mobile-app__list-item:not(:last-child) {
+    margin-right: 16px;
+  }
 }
 
 .mobile-app__link {
@@ -538,13 +564,23 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 8px;
-  border-radius: 100px;
-  color: #403f3d;
-  background-color: #e1d4c9;
   width: 200px;
   padding: 12px 20px;
   border: 1px solid #665f55;
+  -webkit-transition-property: background-color, color, none, none;
+  transition-property: background-color, color, none, none;
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms;
+  -webkit-transition-timing-function: ease-in;
+          transition-timing-function: ease-in;
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+}
+@media screen and (min-width: 1440px) {
+  .mobile-app__link:hover, .mobile-app__link:focus {
+    background-color: #665f55;
+    color: #e1d4c9;
+  }
 }
 .mobile-app__link .btn__text-wrap {
   display: -webkit-box;
@@ -574,4 +610,10 @@ header {
 
 .mobile-app__img {
   width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .mobile-app__img {
+    margin-inline: auto;
+    width: 630px;
+  }
 }/*# sourceMappingURL=main.css.map */

@@ -51,6 +51,7 @@
 
 .hero__btn {
   @extend %btn-primary;
+  @extend %flex-centered;
 
   max-width: 200px;
 
