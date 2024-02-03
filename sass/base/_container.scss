@@ -1,5 +1,5 @@
 .container {
-  outline: 1px dashed tomato;
+  // outline: 1px dashed tomato;
   // margin-left: auto;
   // margin-right: auto;
   margin-inline: auto;
@@ -16,7 +16,6 @@
 
   @media screen and (min-width: $tablet) {
     max-width: 768px;
-    // padding-right: 40px;
     padding-inline: 40px;
   }
 

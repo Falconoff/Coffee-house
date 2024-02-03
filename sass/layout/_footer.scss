@@ -70,10 +70,12 @@ footer {
     stroke: currentColor;
   }
 
-  &:hover,
-  &:focus {
-    background-color: $background-color-body;
-    color: $text-color-dark;
+  @media screen and (min-width: $desktop) {
+    &:hover,
+    &:focus {
+      background-color: $background-color-body;
+      color: $text-color-dark;
+    }
   }
 }
 
@@ -117,10 +119,12 @@ footer {
       @include transition-props(transform, opacity);
     }
 
-    &:hover:after,
-    &:focus::after {
-      transform: scaleX(1);
-      opacity: 1;
+    @media screen and (min-width: $desktop) {
+      &:hover:after,
+      &:focus::after {
+        transform: scaleX(1);
+        opacity: 1;
+      }
     }
   }
 

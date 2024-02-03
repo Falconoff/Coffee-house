@@ -109,7 +109,6 @@ section {
 }
 
 .container {
-  outline: 1px dashed tomato;
   margin-inline: auto;
   padding-inline: 16px;
   /* max-width: 380px; */
@@ -206,8 +205,8 @@ header {
   transition-property: opacity, none, none, -webkit-transform;
   transition-property: transform, opacity, none, none;
   transition-property: transform, opacity, none, none, -webkit-transform;
-  -webkit-transition-duration: 500ms;
-          transition-duration: 500ms;
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
   -webkit-transition-timing-function: ease-in;
           transition-timing-function: ease-in;
   -webkit-transition-delay: 0;
@@ -293,8 +292,8 @@ header {
     opacity: 0;
     -webkit-transition-property: opacity, none, none, none;
     transition-property: opacity, none, none, none;
-    -webkit-transition-duration: 500ms;
-            transition-duration: 500ms;
+    -webkit-transition-duration: 300ms;
+            transition-duration: 300ms;
     -webkit-transition-timing-function: ease-in;
             transition-timing-function: ease-in;
     -webkit-transition-delay: 0;
@@ -310,8 +309,8 @@ header {
     transition-property: color, none, none, -webkit-transform;
     transition-property: transform, color, none, none;
     transition-property: transform, color, none, none, -webkit-transform;
-    -webkit-transition-duration: 500ms;
-            transition-duration: 500ms;
+    -webkit-transition-duration: 300ms;
+            transition-duration: 300ms;
     -webkit-transition-timing-function: ease-in;
             transition-timing-function: ease-in;
     -webkit-transition-delay: 0;
@@ -398,8 +397,8 @@ header {
   background-color: #e1d4c9;
   -webkit-transition-property: background-color, stroke, none, none;
   transition-property: background-color, stroke, none, none;
-  -webkit-transition-duration: 500ms;
-          transition-duration: 500ms;
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
   -webkit-transition-timing-function: ease-in;
           transition-timing-function: ease-in;
   -webkit-transition-delay: 0;
@@ -429,6 +428,9 @@ header {
   }
 }
 @media screen and (min-width: 1440px) {
+  .slider__btn {
+    cursor: pointer;
+  }
   .slider__btn:hover, .slider__btn:focus {
     stroke: #e1d4c9;
     background-color: #665f55;
@@ -488,8 +490,8 @@ header {
   transition-property: none, none, none, -webkit-transform;
   transition-property: transform, none, none, none;
   transition-property: transform, none, none, none, -webkit-transform;
-  -webkit-transition-duration: 500ms;
-          transition-duration: 500ms;
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
   -webkit-transition-timing-function: ease-in;
           transition-timing-function: ease-in;
   -webkit-transition-delay: 0;
@@ -540,6 +542,11 @@ header {
     margin-bottom: 100px;
   }
 }
+@media screen and (min-width: 1440px) {
+  .mobile-app__list {
+    margin-bottom: 0px;
+  }
+}
 
 @media screen and (max-width: calc(768px - 1px)) {
   .mobile-app__list-item:not(:last-child) {
@@ -567,8 +574,8 @@ header {
   border: 1px solid #665f55;
   -webkit-transition-property: background-color, color, none, none;
   transition-property: background-color, color, none, none;
-  -webkit-transition-duration: 500ms;
-          transition-duration: 500ms;
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
   -webkit-transition-timing-function: ease-in;
           transition-timing-function: ease-in;
   -webkit-transition-delay: 0;
@@ -681,8 +688,8 @@ footer {
   background-color: transparent;
   -webkit-transition-property: background-color, color, none, none;
   transition-property: background-color, color, none, none;
-  -webkit-transition-duration: 500ms;
-          transition-duration: 500ms;
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
   -webkit-transition-timing-function: ease-in;
           transition-timing-function: ease-in;
   -webkit-transition-delay: 0;
@@ -691,9 +698,11 @@ footer {
 .social-link__icon {
   stroke: currentColor;
 }
-.social-link:hover, .social-link:focus {
-  background-color: #e1d4c9;
-  color: #403f3d;
+@media screen and (min-width: 1440px) {
+  .social-link:hover, .social-link:focus {
+    background-color: #e1d4c9;
+    color: #403f3d;
+  }
 }
 
 .contacts__title {
@@ -736,17 +745,19 @@ footer {
   transition-property: opacity, none, none, -webkit-transform;
   transition-property: transform, opacity, none, none;
   transition-property: transform, opacity, none, none, -webkit-transform;
-  -webkit-transition-duration: 500ms;
-          transition-duration: 500ms;
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
   -webkit-transition-timing-function: ease-in;
           transition-timing-function: ease-in;
   -webkit-transition-delay: 0;
           transition-delay: 0;
 }
-.contacts__link:hover:after, .contacts__link:focus::after {
-  -webkit-transform: scaleX(1);
-          transform: scaleX(1);
-  opacity: 1;
+@media screen and (min-width: 1440px) {
+  .contacts__link:hover:after, .contacts__link:focus::after {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+    opacity: 1;
+  }
 }
 .contacts__icon {
   stroke: currentColor;
