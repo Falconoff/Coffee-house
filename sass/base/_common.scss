@@ -48,6 +48,10 @@ section {
   margin-bottom: 100px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 // Property declarations should be grouped together in the following order:
 // - Positioning
 // - Box model
