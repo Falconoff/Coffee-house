@@ -2,14 +2,29 @@ footer {
   margin-bottom: 40px;
 
   color: $text-color-light;
-
-  outline: 3px solid blue;
 }
 
 .footer__background {
   padding: 60px 16px;
   border-radius: 40px;
   background-color: $background-color-container;
+
+  @media screen and (min-width: $tablet) {
+    padding: 100px 60px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    gap: 100px;
+    align-items: center;
+    padding: 100px;
+  }
+}
+
+.offer__wrap {
+  @media screen and (min-width: $desktop) {
+    flex-basis: 530px;
+  }
 }
 
 .footer__heading {
@@ -26,9 +41,14 @@ footer {
   margin-bottom: 40px;
 
   display: flex;
+  gap: 12px;
 
-  &__item:not(:last-child) {
-    margin-right: 12px;
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 100px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 0px;
   }
 }
 
@@ -38,15 +58,22 @@ footer {
 
   @extend %flex-centered;
 
+  color: inherit;
+
   border-radius: 100px;
   border: 1px solid $border-color-light;
-
-  /* background-color: $background-color-body; */
   background-color: transparent;
-  // margin-left: auto;
+
+  @include transition-props(background-color, color);
 
   &__icon {
-    stroke: $text-color-dark;
+    stroke: currentColor;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $background-color-body;
+    color: $text-color-dark;
   }
 }
 
@@ -59,7 +86,7 @@ footer {
 }
 
 .contacts {
-  &__item {
+  &__item:not(:last-child) {
     margin-bottom: 16px;
   }
 
@@ -68,7 +95,7 @@ footer {
 
     display: inline-flex;
     gap: 8px;
-    padding-block: 5px;
+    padding-bottom: 4px;
 
     @include typography(inherit, 16px, 600, 1.5);
 

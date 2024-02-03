@@ -619,13 +619,36 @@ header {
 footer {
   margin-bottom: 40px;
   color: #e1d4c9;
-  outline: 3px solid blue;
 }
 
 .footer__background {
   padding: 60px 16px;
   border-radius: 40px;
   background-color: #665f55;
+}
+@media screen and (min-width: 768px) {
+  .footer__background {
+    padding: 100px 60px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .footer__background {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 100px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 100px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .offer__wrap {
+    -ms-flex-preferred-size: 530px;
+        flex-basis: 530px;
+  }
 }
 
 .footer__heading {
@@ -636,21 +659,41 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap: 12px;
 }
-.socials__item:not(:last-child) {
-  margin-right: 12px;
+@media screen and (min-width: 768px) {
+  .socials {
+    margin-bottom: 100px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .socials {
+    margin-bottom: 0px;
+  }
 }
 
 .social-link {
   width: 60px;
   height: 60px;
+  color: inherit;
   border-radius: 100px;
   border: 1px solid #c1b6ad;
-  /* background-color: $background-color-body; */
   background-color: transparent;
+  -webkit-transition-property: background-color, color, none, none;
+  transition-property: background-color, color, none, none;
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms;
+  -webkit-transition-timing-function: ease-in;
+          transition-timing-function: ease-in;
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
 }
 .social-link__icon {
-  stroke: #403f3d;
+  stroke: currentColor;
+}
+.social-link:hover, .social-link:focus {
+  background-color: #e1d4c9;
+  color: #403f3d;
 }
 
 .contacts__title {
@@ -662,7 +705,7 @@ footer {
   line-height: 1.25;
 }
 
-.contacts__item {
+.contacts__item:not(:last-child) {
   margin-bottom: 16px;
 }
 .contacts__link {
@@ -671,7 +714,7 @@ footer {
   display: -ms-inline-flexbox;
   display: inline-flex;
   gap: 8px;
-  padding-block: 5px;
+  padding-bottom: 4px;
   color: inherit;
   font-size: 16px;
   font-weight: 600;
