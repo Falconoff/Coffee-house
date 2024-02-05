@@ -1,0 +1,27 @@
+.menu__heading {
+  margin-bottom: 40px;
+
+  // width: 100%;
+
+  @extend %heading;
+
+  text-align: center;
+
+  &--accent {
+    @extend %heading--accent;
+  }
+}
+
+.product {
+  margin-inline: auto;
+
+  width: 300px;
+
+  border-radius: 40px;
+
+  outline: 2px dotted yellow;
+}
+
+.product__img {
+  border-radius: 40px;
+}

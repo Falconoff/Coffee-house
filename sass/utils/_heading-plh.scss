@@ -14,3 +14,7 @@
   font-style: italic;
   color: $text-color-accent;
 }
+
+// usage:
+// @extend %heading;
+// @extend %heading--accent;
