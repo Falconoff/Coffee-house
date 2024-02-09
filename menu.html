@@ -60,7 +60,7 @@
   <main>
 
     <!-- Menu -->
-    <section>
+    <section class="menu">
       <div class="container">
         <h1 class="visually-hidden">Our Menu</h1>
         <p class="menu__heading">Behind each of our cups hides an <span
@@ -73,121 +73,137 @@
           <li><input type="radio" name="menu" id="desserts">Dessert</li>
         </ul> -->
 
-        <ul class="menu">
-          <li class="menu__item">
-            <div class="product">
-              <div class="product__img-thumb">
-                <img class="product__img" src="./images/coffee/coffee-1.jpg"
-                  alt="a cup of Irish coffee">
-              </div>
-              <div class="product__wrap">
-                <h2 class="product__name">Irish coffee</h2>
-                <p class="product__description">Fragrant black coffee with
-                  Jameson
-                  Irish whiskey and whipped milk
-                </p>
-                <p class="product__price">$7.00</p>
-              </div>
+        <div class="menu__select">
+          <button class="menu__btn" type="button">
+            <div class="menu-btn__icon">
+              <img src="./images/icons/icon-tea.png" alt="">
             </div>
-          </li>
-          <li class="menu__item">
-            <div class="product">
-              <div class="product__img-thumb">
-                <img class="product__img" src="./images/coffee/coffee-2.jpg"
-                  alt="a cup of Kahlua coffee">
-              </div>
-              <div class="product__wrap">
-                <h2 class="product__name">Kahlua coffee</h2>
-                <p class="product__description">Classic coffee with milk and
-                  Kahlua liqueur under a cap of frothed milk
-                </p>
-                <p class="product__price">$7.00</p>
-              </div>
-            </div>
-          </li>
-          <li class="menu__item">
-            <div class="product">
-              <div class="product__img-thumb">
-                <img src="./images/coffee/coffee-3.jpg"
-                  alt="a cup of Honey raf">
-              </div>
-              <div class="product__wrap">
-                <h2 class="product__name">Honey raf</h2>
-                <p class="product__description">Espresso with frothed milk,
-                  cream and aromatic honey</p>
-                <p class="product__price">$5.50</p>
-              </div>
-          </li>
-          <li class="menu__item">
-            <div class="product">
-              <div class="product__img-thumb">
-                <img src="./images/coffee/coffee-4.jpg"
-                  alt="a cup of Ice cappuccino">
-              </div>
-              <div class="product__wrap">
-                <h2 class="product__name">Ice cappuccino</h2>
-                <p class="product__description">Cappuccino with soft thick foam
-                  in summer version with ice</p>
-                <p class="product__price">$5.00</p>
-              </div>
-          </li>
-
-          <button class="load-more-btn" type="button">
-            <svg class="icon-load" width="24" height="24">
-              <use href="./images/icons/sprite.svg#icon-load"></use>
-            </svg>
+            <span class="menu-btn__name">Tea</span>
           </button>
+        </div>
 
-          <!-- <li class="menu__item">
-            <div class="product">
-              <div class="product__img-thumb">
-                <img src="#" alt="a cup of Espresso">
-              </div>
-              <div class="product__wrap">
-                <h2 class="product__name">Espresso</h2>
-                <p class="product__description">Classic black coffee</p>
-                <p class="product__price">$4.50</p>
-              </div>
+        <!-- <div class="menu-list-wrap"> -->
+        <ul class="menu__list">
+          <li class="menu__item product">
+            <!-- <div class="product"> -->
+            <div class="product__img-thumb">
+              <img class="product__img" src="./images/coffee/coffee-1.jpg"
+                alt="a cup of Irish coffee">
+            </div>
+            <div class="product__wrap">
+              <h2 class="product__name">Irish coffee</h2>
+              <p class="product__description">Fragrant black coffee with
+                Jameson
+                Irish whiskey and whipped milk
+              </p>
+              <p class="product__price">$7.00</p>
+            </div>
+            <!-- </div> -->
           </li>
-          <li class="menu__item">
-            <div class="product">
-              <div class="product__img-thumb">
-                <img src="#" alt="a cup of Latte">
-              </div>
-              <div class="product__wrap">
-                <h2 class="product__name">Latte</h2>
-                <p class="product__description">Espresso coffee with the
-                  addition of steamed milk and dense
-                  milk
-                  foam</p>
-                <p class="product__price">$5.50</p>
-              </div>
+          <li class="menu__item product">
+            <!-- <div class="product"> -->
+            <div class="product__img-thumb">
+              <img class="product__img" src="./images/coffee/coffee-2.jpg"
+                alt="a cup of Kahlua coffee">
+            </div>
+            <div class="product__wrap">
+              <h2 class="product__name">Kahlua coffee</h2>
+              <p class="product__description">Classic coffee with milk and
+                Kahlua liqueur under a cap of frothed milk
+              </p>
+              <p class="product__price">$7.00</p>
+            </div>
+            <!-- </div> -->
           </li>
-          <li class="menu__item">
-            <div class="product">
-              <div class="product__img-thumb">
-                <img src="#" alt="a cup of Latte macchiato">
-              </div>
-              <div class="product__wrap">
-                <h2 class="product__name">Latte macchiato</h2>
-                <p class="product__description">Espresso with frothed milk and
-                  chocolate</p>
-                <p class="product__price">$5.50</p>
-              </div>
+          <li class="menu__item product">
+            <!-- <div class="product"> -->
+            <div class="product__img-thumb">
+              <img src="./images/coffee/coffee-3.jpg" alt="a cup of Honey raf">
+            </div>
+            <div class="product__wrap">
+              <h2 class="product__name">Honey raf</h2>
+              <p class="product__description">Espresso with frothed milk,
+                cream and aromatic honey</p>
+              <p class="product__price">$5.50</p>
+            </div>
           </li>
-          <li class="menu__item">
-            <div class="product">
-              <div class="product__img-thumb">
-                <img src="#" alt="a cup of Coffee with cognac">
-              </div>
+          <li class="menu__item product">
+            <!-- <div class="product"> -->
+            <div class="product__img-thumb">
+              <img src="./images/coffee/coffee-4.jpg"
+                alt="a cup of Ice cappuccino">
+            </div>
+            <div class="product__wrap">
+              <h2 class="product__name">Ice cappuccino</h2>
+              <p class="product__description">Cappuccino with soft thick
+                foam
+                in summer version with ice</p>
+              <p class="product__price">$5.00</p>
+            </div>
+          </li>
+
+
+
+          <li class="menu__item product">
+            <!-- <div class="product"> -->
+            <div class="product__img-thumb">
+              <img src="./images/coffee/coffee-5.jpg" alt="a cup of Espresso">
+            </div>
+            <div class="product__wrap">
+              <h2 class="product__name">Espresso</h2>
+              <p class="product__description">Classic black coffee</p>
+              <p class="product__price">$4.50</p>
+            </div>
+          </li>
+          <li class="menu__item product">
+            <!-- <div class="product"> -->
+            <div class="product__img-thumb">
+              <img src="./images/coffee/coffee-6.jpg" alt="a cup of Latte">
+            </div>
+            <div class="product__wrap">
+              <h2 class="product__name">Latte</h2>
+              <p class="product__description">Espresso coffee with the
+                addition of steamed milk and dense
+                milk
+                foam</p>
+              <p class="product__price">$5.50</p>
+            </div>
+          </li>
+          <li class="menu__item product">
+            <!-- <div class="product"> -->
+            <div class="product__img-thumb">
+              <img src="./images/coffee/coffee-7.jpg"
+                alt="a cup of Latte macchiato">
+            </div>
+            <div class="product__wrap">
+              <h2 class="product__name">Latte macchiato</h2>
+              <p class="product__description">Espresso with frothed milk and
+                chocolate</p>
+              <p class="product__price">$5.50</p>
+            </div>
+          </li>
+          <li class="menu__item product">
+            <!-- <div class="product"> -->
+            <div class="product__img-thumb">
+              <img src="./images/coffee/coffee-8.jpg"
+                alt="a cup of Coffee with cognac">
+            </div>
+            <div class="product__wrap">
               <h2>Coffee with cognac</h2>
               <p class="product__description">Fragrant black coffee with cognac
                 and whipped cream</p>
               <p class="product__price">$6.50</p>
             </div>
-          </li> -->
-
+          </li>
         </ul>
+        <!-- </div> -->
+
+        <button class="load-more-btn" type="button">
+          <svg class="icon-load" width="24" height="24">
+            <use href="./images/icons/sprite.svg#icon-load"></use>
+          </svg>
+        </button>
+
       </div>
     </section>
 

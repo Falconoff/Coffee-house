@@ -782,16 +782,64 @@ footer {
   margin-bottom: 40px;
   text-align: center;
 }
-.menu__item {
+.menu__select {
   margin-bottom: 40px;
+  outline: 3px dotted red;
+}
+
+.menu__btn {
+  border-radius: 100px;
+  border: 1px solid #665f55;
+  background-color: #e1d4c9;
+}
+
+.menu__list {
+  margin-bottom: 40px;
+  outline: 3px dotted blue;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 40px;
+}
+@media screen and (min-width: 768px) and (max-width: calc(1440px - 1px)) {
+  .menu__list {
+    padding-inline: 14px;
+  }
+}
+
+.menu__item {
+  margin-inline: auto;
 }
 
 .categories {
   margin-bottom: 40px;
 }
 
-.product {
+.load-more-btn {
   margin-inline: auto;
+  width: 60px;
+  height: 60px;
+  stroke: #403f3d;
+  border-radius: 100px;
+  border: 1px solid #665f55;
+  background-color: #e1d4c9;
+  -webkit-transition-property: background-color, stroke, none, none;
+  transition-property: background-color, stroke, none, none;
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
+  -webkit-transition-timing-function: ease-in;
+          transition-timing-function: ease-in;
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+}
+.load-more-btn:hover, .load-more-btn:focus {
+  stroke: #e1d4c9;
+  background-color: #665f55;
+}
+
+.product {
   width: 310px;
   border: 1px solid #c1b6ad;
   border-radius: 40px;
@@ -835,26 +883,4 @@ footer {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-}
-
-.load-more-btn {
-  margin-inline: auto;
-  width: 60px;
-  height: 60px;
-  stroke: #403f3d;
-  border-radius: 100px;
-  border: 1px solid #665f55;
-  background-color: #e1d4c9;
-  -webkit-transition-property: background-color, stroke, none, none;
-  transition-property: background-color, stroke, none, none;
-  -webkit-transition-duration: 300ms;
-          transition-duration: 300ms;
-  -webkit-transition-timing-function: ease-in;
-          transition-timing-function: ease-in;
-  -webkit-transition-delay: 0;
-          transition-delay: 0;
-}
-.load-more-btn:hover, .load-more-btn:focus {
-  stroke: #e1d4c9;
-  background-color: #665f55;
 }/*# sourceMappingURL=main.css.map */
