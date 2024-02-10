@@ -6,6 +6,7 @@
 
   border: 1px solid $border-color-light;
   border-radius: 40px;
+  overflow: hidden;
 
   &__img-thumb {
     height: 310px;
@@ -25,6 +26,11 @@
     object-position: center;
 
     transform: scale(1.1);
+    @include transition-props(transform);
+
+    .product:hover & {
+      transform: scale(1);
+    }
   }
 
   &__wrap {

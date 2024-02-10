@@ -1,10 +1,7 @@
 .menu__heading {
   margin-bottom: 40px;
 
-  // width: 100%;
-
   @extend %heading;
-
   text-align: center;
 
   &--accent {
@@ -12,29 +9,73 @@
   }
 }
 
-// .menu-list-wrap {
-//   // display: inline-block;
-
-// }
 .menu__select {
   margin-bottom: 40px;
-  outline: 3px dotted red;
-  // display: flex;
-  // margin-inline: auto;
+
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+
+  @media screen and (min-width: $tablet) {
+    gap: 16px;
+  }
 }
 
-.menu__btn {
+.menu-btn {
+  @extend %flex-centered;
+  gap: 8px;
+
   border-radius: 100px;
-  border: 1px solid $border-color-dark;
-  background-color: $background-color-body;
+  padding: 8px 16px 8px 8px;
+  border: 1px solid $border-color-light;
+  background-color: transparent;
+
+  @include transition-props(background-color, color);
+
+  &.active,
+  &:hover,
+  &:focus {
+    background-color: $background-color-container;
+
+    & .menu-btn__icon {
+      background-color: $background-color-body;
+    }
+
+    & .menu-btn__name {
+      color: $text-color-light;
+    }
+  }
+
+  &__icon {
+    width: 30px;
+    height: 30px;
+
+    border-radius: 50%;
+    background-color: $border-color-light;
+
+    background-repeat: no-repeat;
+    background-size: 16px;
+    background-position: 50% 50%;
+
+    &--coffee {
+      background-image: url("../../images/icons/icon-coffee.png");
+    }
+    &--tea {
+      background-image: url("../../images/icons/icon-tea.png");
+    }
+    &--dessert {
+      background-image: url("../../images/icons/icon-dessert.png");
+    }
+  }
+
+  &__name {
+    @include typography(inherit, 16px, 600, 1.5);
+  }
 }
 
 .menu__list {
-  // width: 660px;
-  // margin-inline: auto;
   margin-bottom: 40px;
 
-  outline: 3px dotted blue;
   display: flex;
   flex-wrap: wrap;
   gap: 40px;
@@ -42,19 +83,10 @@
   @media screen and (min-width: $tablet) and (max-width: calc(#{$desktop} - 1px) ) {
     padding-inline: 14px;
   }
-
-  // @media screen and (min-width: $desktop) {
-  //   padding-inline: 0;
-  // }
 }
 
 .menu__item {
-  // margin-bottom: 40px;
   margin-inline: auto;
-
-  // @media screen and (min-width: $tablet) {
-  //   margin: 0;
-  // }
 }
 
 .categories {
@@ -62,10 +94,10 @@
 }
 
 .load-more-btn {
-  // position: absolute;
   margin-inline: auto;
   width: 60px;
   height: 60px;
+
   @extend %flex-centered;
 
   stroke: $text-color-dark;

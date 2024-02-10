@@ -1,4 +1,4 @@
-.load-more-btn, .social-link, .slider__btn, .pagination, .hero__btn, .nav__outer-link, .nav-list, .header__wrap, .btn-burger {
+.load-more-btn, .menu-btn, .social-link, .slider__btn, .pagination, .hero__btn, .nav__outer-link, .nav-list, .header__wrap, .btn-burger {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -784,18 +784,71 @@ footer {
 }
 .menu__select {
   margin-bottom: 40px;
-  outline: 3px dotted red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media screen and (min-width: 768px) {
+  .menu__select {
+    gap: 16px;
+  }
 }
 
-.menu__btn {
+.menu-btn {
+  gap: 8px;
   border-radius: 100px;
-  border: 1px solid #665f55;
+  padding: 8px 16px 8px 8px;
+  border: 1px solid #c1b6ad;
+  background-color: transparent;
+  -webkit-transition-property: background-color, color, none, none;
+  transition-property: background-color, color, none, none;
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
+  -webkit-transition-timing-function: ease-in;
+          transition-timing-function: ease-in;
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+}
+.menu-btn.active, .menu-btn:hover, .menu-btn:focus {
+  background-color: #665f55;
+}
+.menu-btn.active .menu-btn__icon, .menu-btn:hover .menu-btn__icon, .menu-btn:focus .menu-btn__icon {
   background-color: #e1d4c9;
+}
+.menu-btn.active .menu-btn__name, .menu-btn:hover .menu-btn__name, .menu-btn:focus .menu-btn__name {
+  color: #e1d4c9;
+}
+.menu-btn__icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #c1b6ad;
+  background-repeat: no-repeat;
+  background-size: 16px;
+  background-position: 50% 50%;
+}
+.menu-btn__icon--coffee {
+  background-image: url("../../images/icons/icon-coffee.png");
+}
+.menu-btn__icon--tea {
+  background-image: url("../../images/icons/icon-tea.png");
+}
+.menu-btn__icon--dessert {
+  background-image: url("../../images/icons/icon-dessert.png");
+}
+.menu-btn__name {
+  color: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
 }
 
 .menu__list {
   margin-bottom: 40px;
-  outline: 3px dotted blue;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -843,6 +896,7 @@ footer {
   width: 310px;
   border: 1px solid #c1b6ad;
   border-radius: 40px;
+  overflow: hidden;
 }
 .product__img-thumb {
   height: 310px;
@@ -859,6 +913,20 @@ footer {
      object-position: center;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+  -webkit-transition-property: none, none, none, -webkit-transform;
+  transition-property: none, none, none, -webkit-transform;
+  transition-property: transform, none, none, none;
+  transition-property: transform, none, none, none, -webkit-transform;
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
+  -webkit-transition-timing-function: ease-in;
+          transition-timing-function: ease-in;
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+}
+.product:hover .product__img {
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 .product__wrap {
   width: 100%;
