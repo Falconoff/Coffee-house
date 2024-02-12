@@ -61,7 +61,8 @@ header {
   }
 
   &:hover:after,
-  &:focus::after {
+  &:focus::after,
+  &--current:after {
     transform: scaleX(1);
     opacity: 1;
   }

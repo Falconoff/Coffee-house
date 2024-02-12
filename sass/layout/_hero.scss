@@ -1,17 +1,14 @@
 .hero {
   &__background {
-    // height: 552px;
     width: 100%;
+
     border-radius: 40px;
+    padding: 60px 16px;
 
-    background-color: #fff;
+    background-color: $background-color-container;
     background-image: url("../images/hero/img-hero.jpg");
-    // background-image: url("../../images/hero/img-hero.jpg");
-
     background-position: 50% 50%;
     background-size: cover;
-
-    padding: 60px 16px;
 
     @media screen and (min-width: $tablet) {
       padding: 100px 60px;

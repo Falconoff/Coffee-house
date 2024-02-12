@@ -1,8 +1,5 @@
 .product {
-  // margin-inline: auto;
-
   width: 310px;
-  // height: 310px;
 
   border: 1px solid $border-color-light;
   border-radius: 40px;
@@ -14,8 +11,6 @@
 
     overflow: hidden;
     border-radius: 40px;
-
-    // outline: 2px dotted yellow;
   }
 
   &__img {
@@ -35,24 +30,23 @@
 
   &__wrap {
     width: 100%;
-    height: 196px;
+    height: 195px;
 
     display: flex;
     flex-direction: column;
     padding: 20px;
-
-    // background-color: #aaf;
   }
 
   &__name,
   &__price {
     @include typography(inherit, 24px, 600, 1.25);
   }
-}
 
-//   @include typography(fcolor, fsz, fwt, lht);
-.product__description {
-  // background-color: #aa0;
+  &__description {
+    flex-grow: 1;
+  }
 
-  flex-grow: 1;
+  &__name {
+    margin-bottom: 10px;
+  }
 }

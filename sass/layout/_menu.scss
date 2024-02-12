@@ -1,5 +1,8 @@
 .menu__heading {
   margin-bottom: 40px;
+  margin-inline: auto;
+
+  max-width: 800px;
 
   @extend %heading;
   text-align: center;
@@ -10,7 +13,7 @@
 }
 
 .menu__select {
-  margin-bottom: 40px;
+  margin-bottom: 38px;
 
   display: flex;
   gap: 8px;
