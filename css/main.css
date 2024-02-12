@@ -238,7 +238,7 @@ header {
   width: 100%;
   border-radius: 40px;
   background-color: #fff;
-  background-image: url("../../images/hero/img-hero.jpg");
+  background-image: url("../images/hero/img-hero.jpg");
   background-position: 50% 50%;
   background-size: cover;
   padding: 60px 16px;
@@ -832,13 +832,13 @@ footer {
   background-position: 50% 50%;
 }
 .menu-btn__icon--coffee {
-  background-image: url("../../images/icons/icon-coffee.png");
+  background-image: url("../images/icons/icon-coffee.png");
 }
 .menu-btn__icon--tea {
-  background-image: url("../../images/icons/icon-tea.png");
+  background-image: url("../images/icons/icon-tea.png");
 }
 .menu-btn__icon--dessert {
-  background-image: url("../../images/icons/icon-dessert.png");
+  background-image: url("../images/icons/icon-dessert.png");
 }
 .menu-btn__name {
   color: inherit;
