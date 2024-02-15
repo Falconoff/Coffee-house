@@ -1,6 +1,7 @@
 .btn-burger {
   width: 44px;
   height: 44px;
+  position: relative;
 
   @extend %flex-centered;
 
@@ -12,10 +13,17 @@
   margin-left: auto;
 
   &__icon {
+    position: absolute;
     stroke: $text-color-dark;
+
+    @include transition-props(opacity);
   }
 
   @media screen and (min-width: 1440px) {
     display: none;
   }
+}
+
+.btn-burger__icon--is-hidden {
+  opacity: 0;
 }

@@ -151,6 +151,7 @@ html {
 .btn-burger {
   width: 44px;
   height: 44px;
+  position: relative;
   border-radius: 100px;
   border: 1px solid #665f55;
   /* background-color: $background-color-body; */
@@ -158,12 +159,25 @@ html {
   margin-left: auto;
 }
 .btn-burger__icon {
+  position: absolute;
   stroke: #403f3d;
+  -webkit-transition-property: opacity, none, none, none;
+  transition-property: opacity, none, none, none;
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
+  -webkit-transition-timing-function: ease-in;
+          transition-timing-function: ease-in;
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
 }
 @media screen and (min-width: 1440px) {
   .btn-burger {
     display: none;
   }
+}
+
+.btn-burger__icon--is-hidden {
+  opacity: 0;
 }
 
 .product {
@@ -243,6 +257,7 @@ html {
 }
 
 header {
+  position: relative;
   padding-block: 20px;
 }
 
@@ -261,8 +276,8 @@ header {
     display: -ms-flexbox;
     display: flex;
     width: 100%;
+    color: inherit;
     font-size: 16px;
-    font-style: normal;
     font-weight: 600;
     line-height: 1.5;
   }
@@ -321,6 +336,59 @@ header {
 .link__icon {
   fill: transparent;
   stroke: currentColor;
+}
+
+.mobile-nav {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 380px;
+  padding-block: 60px;
+  background-color: #e1d4c9;
+  color: inherit;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1.25;
+  outline: 2px dotted blue;
+  -webkit-transition-property: opacity, none, none, none;
+  transition-property: opacity, none, none, none;
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
+  -webkit-transition-timing-function: ease-in;
+          transition-timing-function: ease-in;
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+}
+@media screen and (min-width: 768px) {
+  .mobile-nav {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .mobile-nav {
+    display: none;
+  }
+}
+.mobile-nav__list {
+  margin-bottom: 100px;
+}
+.mobile-nav__item {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.mobile-nav__link {
+  color: inherit;
+}
+.mobile-nav__icon {
+  width: 40px;
+  height: 40px;
+  fill: transparent;
+  stroke: currentColor;
+}
+.mobile-nav--is-hidden {
+  opacity: 0;
 }
 
 .hero__background {

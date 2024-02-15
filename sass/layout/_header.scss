@@ -1,6 +1,6 @@
 header {
-  // padding-top: 20px;
-  // padding-bottom: 20px;
+  position: relative;
+
   padding-block: 20px;
 }
 
@@ -19,10 +19,7 @@ header {
     display: flex;
     width: 100%;
 
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 1.5;
+    @include typography(inherit, 16px, 600, 1.5);
   }
 }
 
@@ -79,4 +76,54 @@ header {
 .link__icon {
   fill: transparent;
   stroke: currentColor;
+}
+
+.mobile-nav {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: $mobile;
+
+  padding-block: 60px;
+
+  background-color: $background-color-body;
+
+  @include typography(inherit, 32px, 600, 1.25);
+
+  outline: 2px dotted blue;
+
+  @include transition-props(opacity);
+
+  @media screen and (min-width: $tablet) {
+    width: $tablet;
+  }
+  @media screen and (min-width: $desktop) {
+    display: none;
+  }
+
+  &__list {
+    margin-bottom: 100px;
+  }
+
+  &__item {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  &__link {
+    color: inherit;
+  }
+
+  &__icon {
+    width: 40px;
+    height: 40px;
+
+    fill: transparent;
+    stroke: currentColor;
+  }
+
+  &--is-hidden {
+    opacity: 0;
+  }
 }
