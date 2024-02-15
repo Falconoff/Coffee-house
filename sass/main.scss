@@ -10,11 +10,13 @@
 // base
 @import "./base/common";
 @import "./base/container";
+@import "./base/backdrop";
 // @import "./base/section";
 
 // components
 @import "./components/btn-burger";
-// @import './components/button';
+@import "./components/product-card";
+@import "./components/modal";
 // @import './components/logo';
 // @import './components/mobile-menu';
 // @import './components/socials-links';
@@ -31,5 +33,4 @@
 @import "./layout/mobile-app";
 @import "./layout/footer";
 @import "./layout/menu";
-@import "./components/product-card";
 // @import './layout/gallery';

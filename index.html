@@ -44,7 +44,8 @@
             </svg>
           </a>
         </nav>
-        <button class="btn-burger" type="button">
+        <!-- Open Menu Button (only for tablet and modal) -->
+        <button class="btn-burger" type="button" data-open-modal>
           <svg class="btn-burger__icon" width="18" height="16">
             <use href="./images/icons/sprite.svg#icon-menu-open"></use>
           </svg>
@@ -265,6 +266,28 @@
       </div>
     </footer>
   </main>
+
+  <div class="backdrop is-hidden" data-backdrop>
+    <div class="modal">
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex tempore
+        commodi veniam ipsam tenetur et deserunt delectus alias qui
+        exercitationem
+        sint, a ipsa quia corrupti facilis nihil dicta sed impedit in possimus
+        at
+        atque eligendi incidunt. Error sapiente suscipit harum neque repudiandae
+        maiores unde debitis? Itaque maiores iste quo illum? Eos nam, hic
+        voluptate iste aliquid dolor quidem accusantium ducimus sit enim ullam
+        quae dolorem facere eum esse quas minus aspernatur nostrum omnis
+        suscipit,
+        modi itaque fugit?
+      </p><br>
+      <button type="button" data-close-modal>Close</button>
+    </div>
+  </div>
+
+
+  <script src="./js/script.js"></script>
 </body>
 
 </html>
