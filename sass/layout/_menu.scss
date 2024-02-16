@@ -24,57 +24,57 @@
   }
 }
 
-.menu-btn {
-  @extend %flex-centered;
-  gap: 8px;
+// .menu-btn {
+//   @extend %flex-centered;
+//   gap: 8px;
 
-  border-radius: 100px;
-  padding: 8px 16px 8px 8px;
-  border: 1px solid $border-color-light;
-  background-color: transparent;
+//   border-radius: 100px;
+//   padding: 8px 16px 8px 8px;
+//   border: 1px solid $border-color-light;
+//   background-color: transparent;
 
-  @include transition-props(background-color, color);
+//   @include transition-props(background-color, color);
 
-  &.active,
-  &:hover,
-  &:focus {
-    background-color: $background-color-container;
+//   &.active,
+//   &:hover,
+//   &:focus {
+//     background-color: $background-color-container;
 
-    & .menu-btn__icon {
-      background-color: $background-color-body;
-    }
+//     & .menu-btn__icon {
+//       background-color: $background-color-body;
+//     }
 
-    & .menu-btn__name {
-      color: $text-color-light;
-    }
-  }
+//     & .menu-btn__name {
+//       color: $text-color-light;
+//     }
+//   }
 
-  &__icon {
-    width: 30px;
-    height: 30px;
+//   &__icon {
+//     width: 30px;
+//     height: 30px;
 
-    border-radius: 50%;
-    background-color: $border-color-light;
+//     border-radius: 50%;
+//     background-color: $border-color-light;
 
-    background-repeat: no-repeat;
-    background-size: 16px;
-    background-position: 50% 50%;
+//     background-repeat: no-repeat;
+//     background-size: 16px;
+//     background-position: 50% 50%;
 
-    &--coffee {
-      background-image: url("../images/icons/icon-coffee.png");
-    }
-    &--tea {
-      background-image: url("../images/icons/icon-tea.png");
-    }
-    &--dessert {
-      background-image: url("../images/icons/icon-dessert.png");
-    }
-  }
+//     &--coffee {
+//       background-image: url("../images/icons/icon-coffee.png");
+//     }
+//     &--tea {
+//       background-image: url("../images/icons/icon-tea.png");
+//     }
+//     &--dessert {
+//       background-image: url("../images/icons/icon-dessert.png");
+//     }
+//   }
 
-  &__name {
-    @include typography(inherit, 16px, 600, 1.5);
-  }
-}
+//   &__name {
+//     @include typography(inherit, 16px, 600, 1.5);
+//   }
+// }
 
 .menu__list {
   margin-bottom: 40px;

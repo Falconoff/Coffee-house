@@ -1,0 +1,57 @@
+.tab-btn {
+  @extend %flex-centered;
+  gap: 8px;
+
+  border-radius: 100px;
+  padding: 8px 16px 8px 8px;
+  border: 1px solid $border-color-light;
+  background-color: transparent;
+
+  @include typography(inherit, 16px, 600, 1.5);
+
+  @include transition-props(background-color, color);
+
+  &.active,
+  &:hover,
+  &:focus {
+    background-color: $background-color-container;
+
+    & .tab-btn__icon {
+      background-color: $background-color-body;
+    }
+
+    & .tab-btn__name {
+      color: $text-color-light;
+    }
+  }
+
+  &__icon {
+    width: 30px;
+    height: 30px;
+
+    border-radius: 50%;
+    background-color: $border-color-light;
+
+    @extend %flex-centered;
+
+    // @include typography(inherit, 16px, 600, 1.5);
+
+    background-repeat: no-repeat;
+    background-size: 16px;
+    background-position: 50% 50%;
+
+    &--coffee {
+      background-image: url("../images/icons/icon-coffee.png");
+    }
+    &--tea {
+      background-image: url("../images/icons/icon-tea.png");
+    }
+    &--dessert {
+      background-image: url("../images/icons/icon-dessert.png");
+    }
+  }
+
+  // &__name {
+  //   @include typography(inherit, 16px, 600, 1.5);
+  // }
+}

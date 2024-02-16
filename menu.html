@@ -74,19 +74,19 @@
         </ul> -->
 
         <div class="menu__select">
-          <button class="menu-btn active" type="button">
-            <div class="menu-btn__icon menu-btn__icon--coffee"></div>
-            <span class="menu-btn__name">Coffee</span>
+          <button class="tab-btn active" type="button">
+            <div class="tab-btn__icon tab-btn__icon--coffee"></div>
+            <span class="tab-btn__name">Coffee</span>
           </button>
 
-          <button class="menu-btn" type="button">
-            <div class="menu-btn__icon menu-btn__icon--tea"></div>
-            <span class="menu-btn__name">Tea</span>
+          <button class="tab-btn" type="button">
+            <div class="tab-btn__icon tab-btn__icon--tea"></div>
+            <span class="tab-btn__name">Tea</span>
           </button>
 
-          <button class="menu-btn" type="button">
-            <div class="menu-btn__icon menu-btn__icon--dessert"></div>
-            <span class="menu-btn__name">Dessert</span>
+          <button class="tab-btn" type="button">
+            <div class="tab-btn__icon tab-btn__icon--dessert"></div>
+            <span class="tab-btn__name">Dessert</span>
           </button>
         </div>
 
@@ -272,6 +272,64 @@
       </div>
     </footer>
   </main>
+
+  <div class="backdrop" data-backdrop>
+    <!-- is-hidden -->
+    <div class="modal">
+      <div class="prod__name">Irish coffee</div>
+      <p class="prod__description">Fragrant black coffee with Jameson Irish
+        whiskey and whipped milk</p>
+
+      <p>Size</p>
+      <div class="prod__options">
+        <button class="tab-btn active" type="button">
+          <div class="tab-btn__icon ">S</div>
+          <span class="tab-btn__name">200 ml</span>
+        </button>
+
+        <button class="tab-btn" type="button">
+          <div class="tab-btn__icon ">M</div>
+          <span class="tab-btn__name">300 ml</span>
+        </button>
+
+        <button class="tab-btn" type="button">
+          <div class="tab-btn__icon ">L</div>
+          <span class="tab-btn__name">400 ml</span>
+        </button>
+      </div>
+
+      <p>Additives</p>
+      <div class="prod__options">
+        <button class="tab-btn active" type="button">
+          <div class="tab-btn__icon ">1</div>
+          <span class="tab-btn__name">Sugar</span>
+        </button>
+
+        <button class="tab-btn" type="button">
+          <div class="tab-btn__icon ">2</div>
+          <span class="tab-btn__name">Cinnamon</span>
+        </button>
+
+        <button class="tab-btn" type="button">
+          <div class="tab-btn__icon ">3</div>
+          <span class="tab-btn__name">Syrup</span>
+        </button>
+      </div>
+
+      <div class="prod__price">
+        <span>Total:</span>
+        <span>$7.00</span>
+      </div>
+
+
+      <p class="prod__alert">The cost is not final. Download our mobile app to
+        see the final price
+        and place your order. Earn loyalty points and enjoy your favorite coffee
+        with up to 20% discount.</p>
+
+      <button type="button" data-close-modal>Close</button>
+    </div>
+  </div>
 </body>
 
 </html>
