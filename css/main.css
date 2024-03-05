@@ -318,13 +318,13 @@ html {
   -webkit-transition-delay: 0;
           transition-delay: 0;
 }
-.tab-btn.active, .tab-btn:hover, .tab-btn:focus {
+.tab-btn:hover, .tab-btn:focus {
   background-color: #665f55;
 }
-.tab-btn.active .tab-btn__icon, .tab-btn:hover .tab-btn__icon, .tab-btn:focus .tab-btn__icon {
+.tab-btn:hover .tab-btn__icon, .tab-btn:focus .tab-btn__icon {
   background-color: #e1d4c9;
 }
-.tab-btn.active .tab-btn__name, .tab-btn:hover .tab-btn__name, .tab-btn:focus .tab-btn__name {
+.tab-btn:hover .tab-btn__name, .tab-btn:focus .tab-btn__name {
   color: #e1d4c9;
 }
 .tab-btn__icon {
@@ -344,6 +344,39 @@ html {
 }
 .tab-btn__icon--dessert {
   background-image: url("../images/icons/icon-dessert.png");
+}
+
+.sub-menu {
+  cursor: pointer;
+}
+
+.sub-menu__checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  outline: 0;
+  outline-offset: 0;
+}
+
+.sub-menu__checkbox:checked + .tab-btn,
+.sub-menu__checkbox:focus + .tab-btn {
+  background-color: #665f55;
+}
+.sub-menu__checkbox:checked + .tab-btn .tab-btn__icon,
+.sub-menu__checkbox:focus + .tab-btn .tab-btn__icon {
+  background-color: #e1d4c9;
+}
+.sub-menu__checkbox:checked + .tab-btn .tab-btn__name,
+.sub-menu__checkbox:focus + .tab-btn .tab-btn__name {
+  color: #e1d4c9;
 }
 
 header {

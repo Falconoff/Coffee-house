@@ -67,13 +67,67 @@
             class="menu__heading--accent">amazing surprise</span>
         </p>
 
+        <!-- to do -->
         <!-- <ul class="categories">
-          <li><input type="radio" name="menu" id="coffee">Coffee</li>
-          <li><input type="radio" name="menu" id="tea">Tea</li>
-          <li><input type="radio" name="menu" id="desserts">Dessert</li>
+          <li>
+            <label class="sub-menu__label">
+              <input class="sub-menu__checkbox--old" type="radio" name="menu"
+                id="coffee">
+              <span class="sub-menu__name">Coffee</span>
+            </label>
+          </li>
+          <li>
+            <label class="sub-menu__label">
+              <input class="sub-menu__checkbox--old" type="radio" name="menu"
+                id="tea">
+              <span class="sub-menu__name">Tea</span>
+            </label>
+          </li>
+          <li>
+            <label class="sub-menu__label">
+              <input class="sub-menu__checkbox--old" type="radio" name="menu"
+                id="desserts">
+              <span class="sub-menu__name">Dessert</span>
+            </label>
+          </li>
         </ul> -->
 
-        <div class="menu__select">
+        <!-- 2 -->
+        <form>
+          <ul class="menu__select">
+            <li>
+              <label class="sub-menu">
+                <input class="sub-menu__checkbox" type="radio" name="menu"
+                  checked>
+                <div class="tab-btn">
+                  <div class="tab-btn__icon tab-btn__icon--coffee"></div>
+                  <span class="tab-btn__name">Coffee</span>
+                </div>
+              </label>
+            </li>
+            <li>
+              <label class="sub-menu">
+                <input class="sub-menu__checkbox" type="radio" name="menu">
+                <div class="tab-btn">
+                  <div class="tab-btn__icon tab-btn__icon--tea"></div>
+                  <span class="tab-btn__name">Tea</span>
+                </div>
+              </label>
+            </li>
+            <li>
+              <label class="sub-menu">
+                <input class="sub-menu__checkbox" type="radio" name="menu">
+                <div class="tab-btn">
+                  <div class="tab-btn__icon tab-btn__icon--dessert"></div>
+                  <span class="tab-btn__name">Dessert</span>
+                </div>
+              </label>
+            </li>
+          </ul>
+        </form>
+
+        <!-- !!! just buttons -->
+        <!-- <div class="menu__select">
           <button class="tab-btn active" type="button">
             <div class="tab-btn__icon tab-btn__icon--coffee"></div>
             <span class="tab-btn__name">Coffee</span>
@@ -88,7 +142,7 @@
             <div class="tab-btn__icon tab-btn__icon--dessert"></div>
             <span class="tab-btn__name">Dessert</span>
           </button>
-        </div>
+        </div> -->
 
         <!-- <div class="menu-list-wrap"> -->
         <ul class="menu__list">
@@ -273,7 +327,8 @@
     </footer>
   </main>
 
-  <div class="backdrop" data-backdrop>
+  <!-- ================ MODAL ================ -->
+  <div class="backdrop is-hidden" data-backdrop>
     <!-- is-hidden -->
     <div class="modal">
       <div class="prod__name">Irish coffee</div>
